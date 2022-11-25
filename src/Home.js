@@ -83,7 +83,7 @@ const Home = ({ db }) => {
           a.shelf === r.shelf
       );
       if (found) {
-        //console.log(typeof found.amount, typeof r.amount);
+        
         found.amount = Number(found.amount);
         found.amount += Number(r.amount);
       } else {
@@ -93,9 +93,6 @@ const Home = ({ db }) => {
 
   process();
 
-  //console.log(new Date().toLocaleString());
-  //console.log(result);
-  //console.log("boards => ", boards);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -108,10 +105,9 @@ const Home = ({ db }) => {
       shelf: newShelf,
     })
       .then(() => {
-        console.log("added");
         window.location.reload();
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   const handleUse = (e) => {
     e.preventDefault();
@@ -124,9 +120,9 @@ const Home = ({ db }) => {
       shelf: newShelf,
     })
       .then(() => {
-        console.log("removed");
+        
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
     addDoc(actionsCollectionRef, {
       type: newType,
       thick: newThick,
@@ -138,18 +134,16 @@ const Home = ({ db }) => {
       time: new Date().toLocaleString(),
     })
       .then(() => {
-        console.log("removed");
         window.location.reload();
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   let filter = [];
   const handleFilter = () => {
     filter = result.filter((r) => r.type === newType && r.thick === newThick);
-    //console.log(filter);
+    
     setNewFilter(filter);
   };
-  //console.log(newFilter);
 
   return (
     <div className="home">
