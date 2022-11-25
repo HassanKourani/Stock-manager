@@ -21,7 +21,7 @@ const Edit = ({ db }) => {
       .then(() => {
         setType("");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   const handleAddThick = (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ const Edit = ({ db }) => {
       .then(() => {
         setThick("");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   const handleAddWidth = (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ const Edit = ({ db }) => {
       .then(() => {
         setWidth("");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   const handleAddHeight = (e) => {
     e.preventDefault();
@@ -45,7 +45,7 @@ const Edit = ({ db }) => {
       .then(() => {
         setHeight("");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   const handleAddUser = (e) => {
     e.preventDefault();
@@ -53,7 +53,7 @@ const Edit = ({ db }) => {
       .then(() => {
         setUser("");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   const handleAddShelf = (e) => {
     e.preventDefault();
@@ -61,7 +61,7 @@ const Edit = ({ db }) => {
       .then(() => {
         setShelf("");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {});
   };
   return (
     <div className="edit">
